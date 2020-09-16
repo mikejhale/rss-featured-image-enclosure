@@ -6,7 +6,7 @@
  * @package RSS_Featured_Image_Enclosure
  */
 
-/*
+/*git r
 Plugin Name: RSS Featured Image Enclosure
 Plugin URI: https://blackdoctor.org/plugins/rss-featured-image-enclosure
 Description: Automatically add page breaks.
@@ -62,7 +62,7 @@ class RSS_Featured_Image_Enclosure {
 			$mime  = get_post_mime_type( $thumbnail_id );
 		} else {
 			$attachments = get_posts( $args );
-			if ( count ( $attachments ) > 0 ) {
+			if ( count( $attachments ) > 0 ) {
 				$image = wp_get_attachment_image_src( $attachments[0]->ID, 'full' );
 				$mime  = get_post_mime_type( $attachments[0]->ID );
 			}
@@ -72,7 +72,7 @@ class RSS_Featured_Image_Enclosure {
 			printf(
 				'<enclosure url="%s" length="%s" type="%s"/>',
 				esc_attr( $image[0] ),
-				esc_attr( $image[1] ),
+				esc_attr( filesize( get_attached_file( $thumbnail_id ) ) ),
 				esc_attr( $mime )
 			);
 		}
