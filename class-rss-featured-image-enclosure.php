@@ -6,7 +6,7 @@
  * @package RSS_Featured_Image_Enclosure
  */
 
-/*git r
+/*
 Plugin Name: RSS Featured Image Enclosure
 Plugin URI: https://blackdoctor.org/plugins/rss-featured-image-enclosure
 Description: Automatically add page breaks.
